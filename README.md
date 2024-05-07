@@ -4,8 +4,8 @@ python manage.py runserver 0.0.0.0:8000
 
 gunicorn --bind 0.0.0.0:8000 myproject.wsgi
 
-### setup gunicorn service
-# cd /etc/systemd/system
+* setup gunicorn service
+*  cd /etc/systemd/system
 =================
 sitename.socket
 =================
@@ -78,7 +78,7 @@ server {
     proxy_connect_timeout 1800;
     proxy_send_timeout 1800;
     send_timeout 1800;
-
+    
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
         alias /home/pushpan/workingdirectory/static/;
